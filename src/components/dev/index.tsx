@@ -1,31 +1,28 @@
 import React, { useState } from 'react';
-import dynamic from 'next/dynamic';
-import FeatherConst from '~components/atom/Feather/featherConst';
+// import { ProSidebar, Menu, MenuItem } from 'react-pro-sidebar';
 
-import { ProSidebar, Menu, MenuItem } from 'react-pro-sidebar';
 
-const Logo = dynamic(() => import('./Logo'), { ssr: false });
-const FeatherIconDev = dynamic(() => import('./icons/FeatherIcon'), { ssr: false });
-const SvgIcon = dynamic(() => import('./icons/SvgIcon'), { ssr: false });
-const PngIcon = dynamic(() => import('./icons/PngIcon'), { ssr: false });
-const Buttons = dynamic(() => import('./Buttons'), { ssr: false });
-const Badges = dynamic(() => import('./Badges'), { ssr: false });
-const Inputs = dynamic(() => import('./Inputs'), { ssr: false });
-const Checkboxs = dynamic(() => import('./Checkboxs'), { ssr: false });
-const Dropdowns = dynamic(() => import('./Dropdowns'), { ssr: false });
-const Radios = dynamic(() => import('./Radios'), { ssr: false });
-const Toggles = dynamic(() => import('./Toggles'), { ssr: false });
-const Tables = dynamic(() => import('./Tables'), { ssr: false });
-const Tabs = dynamic(() => import('./Tabs'), { ssr: false });
-const Toast = dynamic(() => import('./Toast'), { ssr: false });
-const Paginations = dynamic(() => import('./Paginations'), { ssr: false });
-const DatePickers = dynamic(() => import('./DatePickers'), { ssr: false });
-const Uploads = dynamic(() => import('./Uploads'), { ssr: false });
-const Modal = dynamic(() => import('./Modal'), { ssr: false });
-const Cookie = dynamic(() => import('./Cookie'), { ssr: false });
-const ConsoleTooltip = dynamic(() => import('./ConsoleTooltip'), { ssr: false });
-const Editor = dynamic(() => import('./Editor'), { ssr: false });
-const LoadingContent = dynamic(() => import('./LoadingContent'), { ssr: false });
+   import  Logo from './Logo'
+  import  FeatherIcon from './icons/FeatherIcon'
+  import  SvgIcon from './icons/SvgIcon'
+  import  PngIcon from'./icons/PngIcon'
+   import  Buttons from'./Buttons'
+   import  Badges from'./Badges'
+   import  Inputs from'./Inputs'
+   import  Checkboxs from'./Checkboxs'
+   import  Dropdowns from'./Dropdowns'
+   import  Radios from'./Radios'
+   import  Toggles from'./Toggles'
+   import  Tables from'./Tables'
+   import  Tabs from'./Tabs'
+   import  Toast from'./Toast'
+   import  Paginations from'./Paginations'
+   import  DatePickers from './DatePickers'
+   import  Uploads from './Uploads'
+   import  Modal from './Modal'
+   import  Cookie from './Cookie'
+   import  ConsoleTooltip from './ConsoleTooltip'
+   import  LoadingContent from './LoadingContent'
 
 const PAGE_CONST = {
   FeatherIcon: 'Feather',
@@ -60,7 +57,7 @@ const Dev: React.FC = () => {
 
   return (
     <div className="dev-layout">
-      <aside className="dev-layout__sidebar">
+      {/* <aside className="dev-layout__sidebar">
         <ProSidebar>
           <Menu>
             {menus.map((menu, index) => (
@@ -76,9 +73,9 @@ const Dev: React.FC = () => {
             ))}
           </Menu>
         </ProSidebar>
-      </aside>
+      </aside> */}
       <div className="dev-layout__content">
-        {targetPage === PAGE_CONST.FeatherIcon && <FeatherIconDev />}
+        {targetPage === PAGE_CONST.FeatherIcon && <FeatherIcon />}
         {targetPage === PAGE_CONST.PngIcon && <PngIcon />}
         {targetPage === PAGE_CONST.SvgIcon && <SvgIcon />}
         {targetPage === PAGE_CONST.Buttons && <Buttons />}
@@ -96,7 +93,6 @@ const Dev: React.FC = () => {
         {targetPage === PAGE_CONST.Uploads && <Uploads />}
         {targetPage === PAGE_CONST.Modal && <Modal />}
         {targetPage === PAGE_CONST.Cookie && <Cookie />}
-        {targetPage === PAGE_CONST.Editor && <Editor />}
         {targetPage === PAGE_CONST.LoadingContent && <LoadingContent />}
       </div>
     </div>
