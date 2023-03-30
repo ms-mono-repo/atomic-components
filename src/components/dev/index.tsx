@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { ProSidebar, Menu, MenuItem } from 'react-pro-sidebar';
+import {  Menu, MenuItem, Sidebar } from 'react-pro-sidebar';
 
 
    import  Logo from './Logo'
@@ -57,13 +57,13 @@ const Dev: React.FC = () => {
 
   return (
     <div className="dev-layout">
-      {/* <aside className="dev-layout__sidebar">
-        <ProSidebar>
+      <aside className="dev-layout__sidebar">
+        <Sidebar>
           <Menu>
             {menus.map((menu, index) => (
               <MenuItem
                 key={menu}
-                className={targetPage === menu && 'active'}
+                className={targetPage === menu ? 'active' : ''}
                 onClick={() => {
                   setTargetPage(menu);
                 }}
@@ -72,8 +72,8 @@ const Dev: React.FC = () => {
               </MenuItem>
             ))}
           </Menu>
-        </ProSidebar>
-      </aside> */}
+        </Sidebar>
+      </aside>
       <div className="dev-layout__content">
         {targetPage === PAGE_CONST.FeatherIcon && <FeatherIcon />}
         {targetPage === PAGE_CONST.PngIcon && <PngIcon />}
