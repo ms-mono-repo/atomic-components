@@ -10,3 +10,22 @@
 # 컨벤션(구성중...)
 -  보여줘야 하는 데이터는 state는 props로 관리한다. 
 -  check box인 경우 컴포넌트 안에서 state를 useEffect로 관리하고있다. 이와 같은 경우에는 안에서 state를 만들어서 관리한다.
+
+# 프로젝트 세팅
+```
+$ npx create-react-app . --template typescript
+
+//yarn setting
+$ npm install -g yarn
+$ yarn init
+$ yarn install
+```
+
+# 아토믹 아이콘을 얻을 수 있는 무료 사이트
+- Flaticon: https://www.flaticon.com/
+- Font Awesome: https://fontawesome.com/
+- Material Design Icons: https://materialdesignicons.com/
+- Feather Icons: https://feathericons.com/
+- Streamline Icons: https://streamlineicons.com/
+- Remix Icon: https://remixicon.com/
+- Heroicons: https://heroicons.com/
